@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+/* next-themes writes .dark on <html>, so drive Tailwind's dark: variant from it. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens — light                                              */
+/* ------------------------------------------------------------------ */
+:root {
+  --bg: #fafaf9;
+  --bg-alt: #f3f4f3;
+  --surface: #ffffff;
+  --surface-2: #f5f6f6;
+  --border: #e3e5e6;
+  --border-strong: #cdd1d3;
+  --text: #0e1113;
+  --muted: #5b6469;
+  --faint: #7c858b;
+
+  --accent: #0d9488;
+  --accent-strong: #0f766e;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgb(13 148 136 / 0.09);
+  --accent-line: rgb(13 148 136 / 0.32);
+
+  --grid-line: rgb(14 17 19 / 0.045);
+  --shadow-sm: 0 1px 2px rgb(14 17 19 / 0.05);
+  --shadow-md: 0 1px 2px rgb(14 17 19 / 0.04), 0 8px 24px -12px rgb(14 17 19 / 0.16);
+  --shadow-lg: 0 2px 4px rgb(14 17 19 / 0.04), 0 24px 48px -24px rgb(14 17 19 / 0.24);
+
+  --radius: 14px;
+  --radius-sm: 9px;
+  --nav-h: 68px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens — dark (the primary experience)                      */
+/* ------------------------------------------------------------------ */
+.dark {
+  --bg: #08090b;
+  --bg-alt: #0b0d10;
+  --surface: #0e1013;
+  --surface-2: #14171a;
+  --border: #1f2429;
+  --border-strong: #2d343b;
+  --text: #edeeec;
+  --muted: #8a9199;
+  --faint: #646c74;
+
+  --accent: #2dd4bf;
+  --accent-strong: #5eead4;
+  --accent-contrast: #04211e;
+  --accent-soft: rgb(45 212 191 / 0.1);
+  --accent-line: rgb(45 212 191 / 0.28);
+
+  --grid-line: rgb(237 238 236 / 0.04);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 1px 2px rgb(0 0 0 / 0.45), 0 8px 24px -12px rgb(0 0 0 / 0.7);
+  --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.5), 0 24px 48px -24px rgb(0 0 0 / 0.85);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Tailwind theme bridge                                              */
+/* ------------------------------------------------------------------ */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-contrast: var(--accent-contrast);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-line: var(--accent-line);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
+    Consolas, monospace;
+
+  --radius-token: var(--radius);
+  --shadow-soft: var(--shadow-md);
+  --shadow-deep: var(--shadow-lg);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 24px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.32s ease, color 0.32s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Firefox + WebKit scrollbar, dark-aware */
+* {
+  scrollbar-color: var(--border-strong) transparent;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border: 3px solid var(--bg);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--faint);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utilities                                                          */
+/* ------------------------------------------------------------------ */
+
+/* Monospace metadata label used throughout the page. */
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* Hairline blueprint grid, used behind the hero only. */
+.grid-field {
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: center;
+  mask-image: radial-gradient(ellipse 78% 62% at 50% 34%, #000 30%, transparent 78%);
+  -webkit-mask-image: radial-gradient(
+    ellipse 78% 62% at 50% 34%,
+    #000 30%,
+    transparent 78%
+  );
+}
+
+/* Scroll reveal. Content is visible by default; only animated when the
+   viewer has not asked for reduced motion, and always shown without JS. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.no-js .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Marks the accent-lit edge on interactive cards. */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease,
+    transform 0.22s ease, background-color 0.22s ease;
+}
+.card-hover:hover,
+.card-hover:focus-within {
+  border-color: var(--accent-line);
+  box-shadow: var(--shadow-md);
+}
+
+.dark .card-hover:hover,
+.dark .card-hover:focus-within {
+  box-shadow: 0 0 0 1px var(--accent-line), 0 18px 48px -28px rgb(45 212 191 / 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
