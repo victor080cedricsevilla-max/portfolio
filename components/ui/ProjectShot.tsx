@@ -24,7 +24,7 @@ export function ProjectShot({
   if (hasShot) {
     return (
       <div
-        className={`relative aspect-[16/10] overflow-hidden rounded-[10px] border border-line bg-surface-2 ${className}`}
+        className={`relative aspect-[16/9] overflow-hidden rounded-[10px] border border-line bg-surface-2 ${className}`}
       >
         <Image
           src={src}
@@ -33,7 +33,7 @@ export function ProjectShot({
           priority={priority}
           loading={priority ? undefined : "lazy"}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 560px"
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+          className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
       </div>
     );
@@ -41,7 +41,7 @@ export function ProjectShot({
 
   return (
     <div
-      className={`relative flex aspect-[16/10] flex-col items-center justify-center gap-3 overflow-hidden rounded-[10px] border border-dashed border-line-strong bg-surface-2 px-5 text-center ${className}`}
+      className={`relative flex aspect-[16/9] flex-col items-center justify-center gap-3 overflow-hidden rounded-[10px] border border-dashed border-line-strong bg-surface-2 px-5 text-center ${className}`}
     >
       <div
         aria-hidden="true"

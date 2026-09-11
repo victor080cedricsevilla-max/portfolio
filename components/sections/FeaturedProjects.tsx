@@ -31,7 +31,7 @@ export function FeaturedProjects() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Featured work"
-          title="Six projects worth reading in detail."
+          title="Four projects worth reading in detail."
           description="Each one names the engineering decision behind it, not just the stack it was built with."
           aside={
             <div

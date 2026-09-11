@@ -48,21 +48,20 @@ profile URL and the GitHub button appears automatically in the hero and footer
 Each featured project points at a file under `public/projects/`:
 
 ```
-public/projects/fieldtrip360.webp
-public/projects/nestly.webp
-public/projects/scholarhub.webp
-public/projects/encore-health.webp
-public/projects/gen-zone-works.webp
-public/projects/language-bridge.webp
+public/projects/fieldtrip360.png     ✓ in place
+public/projects/gen-zone-works.png   ✓ in place
+public/projects/iskolarsph.png       ✓ in place
+public/projects/language-bridge.png  — placeholder until added
 ```
 
 Until a file exists, the card renders a labelled placeholder naming the exact
-path. To use a real screenshot:
+path. To add or replace a screenshot:
 
-1. Drop the `.webp` into `public/projects/` with the filename above.
+1. Drop the image into `public/projects/` with the filename above (PNG, JPG or
+   WebP all work — `next/image` converts and resizes on the fly).
 2. Set `hasShot: true` on that project in `data/portfolio.ts`.
 
-A 16:10 image around 1200×750 works best.
+A 16:9 image around 1900×1070 works best; the cards crop to 16:9 from the top.
 
 ### Repo and live links per project
 

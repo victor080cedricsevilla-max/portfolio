@@ -11,7 +11,7 @@ export function About() {
         <SectionHeading
           eyebrow="About"
           title="Products, not demos."
-          description="Six of these projects run real workflows — a client's quoting pipeline, a school's trip roster, a capstone people actually use."
+          description="These projects run real workflows — a client's quoting pipeline, a school's trip roster, a scholarship matcher, a capstone people actually use."
         />
 
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
