@@ -28,14 +28,6 @@ export interface FeaturedProject {
   flags?: string[];
 }
 
-export interface SmallProject {
-  name: string;
-  platform: string;
-  scale: string;
-  points: string[];
-  tier: "secondary" | "practice";
-}
-
 export interface SkillGroup {
   id: string;
   label: string;

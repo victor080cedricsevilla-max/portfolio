@@ -3,7 +3,6 @@ import type {
   EngineeringPrinciple,
   FeaturedProject,
   SkillGroup,
-  SmallProject,
   Stat,
 } from "@/types";
 
@@ -324,81 +323,6 @@ export const featuredProjects: FeaturedProject[] = [
     shot: "/projects/language-bridge.png",
     hasShot: false,
     flags: ["SDG 4", "SDG 10", "SDG 16"],
-  },
-];
-
-/* -------------------------------------------------------------------------- */
-/*  Secondary projects                                                        */
-/* -------------------------------------------------------------------------- */
-
-export const smallProjects: SmallProject[] = [
-  {
-    name: "Nestly",
-    platform: "Expo SDK 57 + TypeScript",
-    scale: "23,719 lines",
-    points: ["expo-router", "Zustand state", "Offline-first storage", "Jest + Testing Library"],
-    tier: "secondary",
-  },
-  {
-    name: "Encore Health",
-    platform: "Expo SDK 57 + TypeScript",
-    scale: "9,291 lines · 40 commits",
-    points: ["Onboarding funnel", "Meal planning", "Localization", "EAS release pipeline"],
-    tier: "secondary",
-  },
-  {
-    name: "SkinShop",
-    platform: "Flutter + Firebase",
-    scale: "5,095 lines",
-    points: ["Provider state", "Cached images", "Shimmer", "Staggered animations"],
-    tier: "secondary",
-  },
-  {
-    name: "HipWorks",
-    platform: "Expo + TypeScript",
-    scale: "4,551 lines · 15 commits",
-    points: ["React Navigation", "Async storage", "SVG rendering"],
-    tier: "secondary",
-  },
-  {
-    name: "Wishlist Saver",
-    platform: "Flutter + Firebase",
-    scale: "4,173 lines",
-    points: [
-      "Google Sign-In",
-      "Storage uploads",
-      "Scheduled notifications",
-      "Timezone support",
-    ],
-    tier: "secondary",
-  },
-  {
-    name: "AuraArchive",
-    platform: "HTML · CSS · JavaScript",
-    scale: "11 pages",
-    points: ["Interactive quiz", "Shop-the-look", "Built without a framework"],
-    tier: "secondary",
-  },
-  {
-    name: "Spotify Clone",
-    platform: "Flutter",
-    scale: "2,258 lines",
-    points: ["UI recreation", "Animation study"],
-    tier: "practice",
-  },
-  {
-    name: "OnSkin",
-    platform: "Expo",
-    scale: "2,040 lines",
-    points: ["Navigation and animation exercise"],
-    tier: "practice",
-  },
-  {
-    name: "SkinSort",
-    platform: "Flutter",
-    scale: "1,380 lines",
-    points: ["Small UI build"],
-    tier: "practice",
   },
 ];
 

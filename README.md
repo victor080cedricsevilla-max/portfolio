@@ -31,7 +31,6 @@ hard-coded into components — change the data file and the whole page follows.
 | Stat strip | `stats` |
 | About copy + profile card | `aboutParagraphs`, `profileCard` |
 | Featured case studies | `featuredProjects` |
-| Smaller projects and practice pieces | `smallProjects` |
 | Skills tabs | `skillGroups` |
 | Chip tooltips | `skillTooltips` |
 | Engineering principle cards | `principles` |
@@ -73,7 +72,7 @@ Source / Live demo buttons appear on that card.
 ```
 app/          layout (metadata, JSON-LD, fonts), page, global tokens
 components/   Navbar, ThemeToggle, CommandPalette, BackToTop, Reveal
-  sections/   Hero, Stats, About, FeaturedProjects, MoreProjects,
+  sections/   Hero, Stats, About, FeaturedProjects,
               Skills, Engineering, Achievements, Contact, Footer
   ui/         SectionHeading, Pill, ProjectShot, SocialLinks,
               FeaturedProjectCard, BrandIcons

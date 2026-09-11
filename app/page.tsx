@@ -6,7 +6,6 @@ import { Engineering } from "@/components/sections/Engineering";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { MoreProjects } from "@/components/sections/MoreProjects";
 import { Skills } from "@/components/sections/Skills";
 import { Stats } from "@/components/sections/Stats";
 
@@ -19,7 +18,6 @@ export default function Page() {
         <Stats />
         <About />
         <FeaturedProjects />
-        <MoreProjects />
         <Skills />
         <Engineering />
         <Achievements />
