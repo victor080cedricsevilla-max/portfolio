@@ -2,7 +2,8 @@ import { SiteChrome } from "@/components/SiteChrome";
 import { About } from "@/components/sections/About";
 import { Achievements } from "@/components/sections/Achievements";
 import { Contact } from "@/components/sections/Contact";
-import { Engineering } from "@/components/sections/Engineering";
+// Uncomment this import, the section below, and its navItems entry to restore Engineering.
+// import { Engineering } from "@/components/sections/Engineering";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -19,7 +20,7 @@ export default function Page() {
         <About />
         <FeaturedProjects />
         <Skills />
-        <Engineering />
+        {/* <Engineering /> */}
         <Achievements />
         <Contact />
       </main>
