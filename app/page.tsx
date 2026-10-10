@@ -1,6 +1,7 @@
 import { SiteChrome } from "@/components/SiteChrome";
 import { About } from "@/components/sections/About";
-import { Achievements } from "@/components/sections/Achievements";
+// Uncomment this import and the section below to restore Selected results.
+// import { Achievements } from "@/components/sections/Achievements";
 import { Contact } from "@/components/sections/Contact";
 // Uncomment this import, the section below, and its navItems entry to restore Engineering.
 // import { Engineering } from "@/components/sections/Engineering";
@@ -21,7 +22,7 @@ export default function Page() {
         <FeaturedProjects />
         <Skills />
         {/* <Engineering /> */}
-        <Achievements />
+        {/* <Achievements /> */}
         <Contact />
       </main>
       <Footer />
