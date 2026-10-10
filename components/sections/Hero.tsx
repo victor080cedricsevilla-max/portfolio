@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Download, Mail } from "lucide-react";
 import { person } from "@/data/portfolio";
 import { CapabilityTicker } from "@/components/sections/CapabilityTicker";
 import { HeroVisual } from "@/components/sections/HeroVisual";
@@ -39,7 +39,7 @@ export function Hero() {
               {person.summary}
             </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <a
                 href="#work"
                 className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-6 text-[14.5px] font-medium text-accent-contrast transition-opacity hover:opacity-90"
@@ -56,6 +56,14 @@ export function Hero() {
               >
                 <Mail aria-hidden="true" className="size-4" />
                 Contact me
+              </a>
+              <a
+                href="/cv/Victor%20Sevilla%20CV.pdf"
+                download="Victor Sevilla CV.pdf"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-line-strong bg-surface px-6 text-[14.5px] font-medium text-ink transition-colors hover:border-accent-line hover:text-accent"
+              >
+                <Download aria-hidden="true" className="size-4" />
+                Download CV
               </a>
             </div>
 
