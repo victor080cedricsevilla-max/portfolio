@@ -33,6 +33,15 @@ export const socials = {
 
 export const mailto = `mailto:${socials.email}`;
 
+/**
+ * Downloadable CV. `href` must match the real filename in `public/cv/`;
+ * `downloadAs` is the friendlier name the browser saves it under.
+ */
+export const cv = {
+  href: "/cv/Victor_Sevilla_CV.pdf",
+  downloadAs: "Victor Sevilla CV.pdf",
+} as const;
+
 /** Set once the site is live so canonical + Open Graph URLs resolve absolutely. */
 export const siteUrl = "https://victor-sevilla.vercel.app";
 

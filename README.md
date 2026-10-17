@@ -26,6 +26,7 @@ hard-coded into components — change the data file and the whole page follows.
 | --- | --- |
 | Name, role, location, avatar | `person` |
 | Email, LinkedIn, Instagram, GitHub | `socials` |
+| Downloadable CV path | `cv` |
 | Deployed URL (canonical + Open Graph) | `siteUrl` |
 | Hero rotating labels | `capabilities` |
 | Stat strip | `stats` |
@@ -41,6 +42,13 @@ hard-coded into components — change the data file and the whole page follows.
 `socials.github` is the placeholder `YOUR_GITHUB_URL`. Replace it with the real
 profile URL and the GitHub button appears automatically in the hero and footer
 (`hasGithub` gates it, so nothing broken shows until then).
+
+### Replacing the CV
+
+Drop the new PDF into `public/cv/`, then set `cv.href` in
+`data/portfolio.ts` to match the filename exactly. Avoid spaces in the
+filename — they need URL-encoding and are easy to get wrong. The old file
+should be deleted so only one CV is ever served.
 
 ### Project screenshots
 

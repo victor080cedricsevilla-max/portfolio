@@ -1,5 +1,5 @@
 import { ArrowRight, Download, Mail } from "lucide-react";
-import { person } from "@/data/portfolio";
+import { cv, person } from "@/data/portfolio";
 import { CapabilityTicker } from "@/components/sections/CapabilityTicker";
 import { HeroVisual } from "@/components/sections/HeroVisual";
 import { SocialLinks } from "@/components/ui/SocialLinks";
@@ -58,8 +58,8 @@ export function Hero() {
                 Contact me
               </a>
               <a
-                href="/cv/Victor%20Sevilla%20CV.pdf"
-                download="Victor Sevilla CV.pdf"
+                href={cv.href}
+                download={cv.downloadAs}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-line-strong bg-surface px-6 text-[14.5px] font-medium text-ink transition-colors hover:border-accent-line hover:text-accent"
               >
                 <Download aria-hidden="true" className="size-4" />
